@@ -1,0 +1,49 @@
+{
+	"name": "esoftplay-style-extractor",
+	"displayName": "esoftplay-style-extractor",
+	"description": "to extract and back inline style editor automatically",
+	"version": "0.0.2",
+	"engines": {
+		"vscode": "^1.46.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:esoftplay-style-extractor.extractStyle",
+		"onCommand:esoftplay-style-extractor.retractStyle"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "esoftplay-style-extractor.extractStyle",
+				"title": "Esoftplay: Extract Style"
+			},
+			{
+				"command": "esoftplay-style-extractor.retractStyle",
+				"title": "Esoftplay: Revert Style"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"publisher": "MunawarKholil",
+	"devDependencies": {
+		"@types/vscode": "^1.46.0",
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^7.0.2",
+		"@types/node": "^13.11.0",
+		"eslint": "^6.8.0",
+		"glob": "^7.1.6",
+		"mocha": "^7.1.2",
+		"typescript": "^3.8.3",
+		"vscode-test": "^1.3.0"
+	},
+	"dependencies": {
+		"shorthash": "0.0.2"
+	}
+}
